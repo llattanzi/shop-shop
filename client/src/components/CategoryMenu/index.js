@@ -1,4 +1,3 @@
-import React from 'react';
 import { useStoreContext } from "../../utils/GlobalState";
 import { useQuery } from '@apollo/client';
 import { QUERY_CATEGORIES } from '../../utils/queries';

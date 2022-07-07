@@ -14,6 +14,7 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
+import Success from './pages/Success';
 import { StoreProvider } from "./utils/GlobalState";
 import OrderHistory from './pages/OrderHistory';
 
@@ -43,7 +44,7 @@ function App() {
         <div>
           <StoreProvider>
             <Nav />
-            <Routes>
+            <Route>
               <Route 
                 path="/" 
                 element={<Home />} 
@@ -68,7 +69,11 @@ function App() {
                 path="*" 
                 element={<NoMatch />}
               />
-            </Routes>
+              <Route
+                path="/success"
+                element={<Success />}
+              />
+            </Route>
           </StoreProvider>
         </div>
       </Router>
